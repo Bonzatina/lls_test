@@ -12,13 +12,14 @@ $( document ).ready(function() {
     $(".controls").click(function(event){
 
         var directiion = event.target.id
-        var aside_id = "#" + directiion + "_aside";
+        var aside_id = "#aside_" + directiion;
 
-        if ($(aside_id).hasClass('show')) {
-            closeSidepage(aside_id, directiion)
+        if ($(aside_id).hasClass('not_display')) {
+            openAside(aside_id, directiion)
+
         }
         else {
-            openSidepage(aside_id, directiion)
+            closeAside(aside_id, directiion)
         }
 
 
@@ -26,7 +27,8 @@ $( document ).ready(function() {
 });
 
 
-function openSidepage(aside_id, directiion) {
+function openAside(aside_id, directiion) {
+    $(aside_id).removeClass("not_display");
     if (directiion === 'left') {
         $(aside_id).animate({
             left: '0px',
@@ -39,23 +41,28 @@ function openSidepage(aside_id, directiion) {
             opacity: 1
         });
     }
-    $(aside_id).addClass("show");
+
 
 }
 
-function closeSidepage(aside_id, directiion) {
+function closeAside(aside_id, directiion) {
     if (directiion === 'left') {
         $(aside_id).animate({
             left: '-300px',
             opacity: 0
+        }, function () {
+            $(aside_id).addClass("not_display");
         });
     }
     else if (directiion === 'right') {
         $(aside_id).animate({
             right: '-300px',
             opacity: 0
+        }, function () {
+            $(aside_id).addClass("not_display");
         });
     }
-    $(aside_id).removeClass("show");
+
+
 }
 

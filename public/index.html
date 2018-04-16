@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
 
     <link href="main.css" rel="stylesheet">
     <script src="index.js"></script>
@@ -13,15 +13,17 @@
 
 <body>
 <div class="app">
+
     <div class="header">
-        <nav>     <button class="controls" id="left">left aside</button></nav>
-        <nav>     <button class="controls" id="right">right aside</button></nav>
+         <div class="controls" id="left">left aside</div>
+         <div class="controls" id="right">right aside</div>
     </div>
 
+
     <div class="main_block">
-        <div class="summary">Képzésünk olyan területen nyújt széles körű ismereteket és szaktudást, amely úgy a hazai,
+        <div class="summary"> Summary info:  Képzésünk olyan területen nyújt széles körű ismereteket és szaktudást, amely úgy a hazai,
             mint a nemzetközi piac egyik legdinamikusabban fejlődő ágazata. Az alapképzés során gyakorlati
-            szoftverfejlesztési és alkalmazói ismeretekkel rendelkező, a munkaerőpiac igényeinek megfelelő szakemberré
+            szoftverfejlesztési igényeinek megfelelő szakemberré
             válsz.
         </div>
 
@@ -137,6 +139,7 @@
             </div>
             <div class="wrap">
             <div class="content_fixed">
+                <h2> Latest</h2>
                 <p>16th IEEE World Symposium on Applied Machine Intelligence and Informatics
                     2018. február 28., szerda</p>
 
@@ -147,7 +150,10 @@
                     2018. február 28., szerda</p>
 
                 <p>Az IEEE Hungary Section meghívottjaként tartott előadást Dr. Eyal Dassau, a Harvard Egyetem kutatója
-                2018. február 28., szerda
+                    2018. február 28., szerda</p>
+
+
+
             </div>
             </div>
         </div>
@@ -156,10 +162,30 @@
 
     </div>
 
-    <aside id="left_aside" >Left sidebar</aside>
-    <aside id="right_aside" >Right sidebar</aside>
+    <aside id="aside_left" class="not_display">
+        <h3>Left sidebar</h3>
+    <div class="aside_text">
+        Széleskörű gyakorlati és elméleti szaktudás a hazai és a nemzetközi piac egyik legdinamikusabban fejlődő ágazatában. Gyakorlati szoftver-fejlesztési és alkalmazói ismeretek a munkaerőpiac igényeinek megfelelően.
+    </div>
 
-    <div class="footer">Copyleft</div>
+        <div class="aside_text">
+            Az alkalmazott matematikus mesterszakunk a műszaki matematika szakiránnyal az országban egyedülálló, hiánypótló képzést jelent.
+    </div>
+    </aside>
+
+    <aside id="aside_right" class="not_display" >
+        <h3>Right sidebar</h3>
+    <div class="aside_text">Az MSc képzésben résztvevők alkalmassá válnak új informatikai rendszerek és eszközök tervezésére, informatikai rendszerek fejlesztésére és integrálására, informatikai célú kutatás-fejlesztési feladatok ellátására.
+    </div>
+
+        <div class="aside_text">A mérnöki tudományokban szerzett tudás továbbfejlesztése. Elmélyülés a pszichológiai és pedagógiai tudományokban. Az elektronikus tanítás és tanulás nyújtotta lehetőségek megismerése.
+    </div>
+    </aside>
+
+    <div class="footer">
+        <div>Copyleft 2018(LLL)</div>
+        <div> <a href="mailto:test@example.com?Subject=Hello%20again" target="_top">Write us: test@example.com</a></div>
+    </div>
 </div>
 
 </body>
