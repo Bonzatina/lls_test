@@ -11,14 +11,13 @@ module.exports = function(grunt) {
                     strictMath: true
                 },
                 files: {
-                    "public/main.css": "public/main.less", // destination file and source file
-                    "public/test.css": "public/test.less", // destination file and source file
+                    "public/main.css": "public/main.less"
                 }
             }
         },
         watch: {
             styles: {
-                files: ['public/main.less', 'public/test.less'], // which files to watch
+                files: ['public/main.less', 'public/test.less'],
                 tasks: ['less'],
                 options: {
                     nospawn: true
